@@ -73,14 +73,14 @@ async def on_command_error(context, error):
             color=0x8233FF
         )
         await context.send(embed=embed)
-    elif isinstance(error, commands.MissingPermissions):
-        embed = discord.Embed(
-            title="Error!",
-            description="You are missing the permission `" + ", ".join(
-                error.missing_perms) + "` to execute this command!",
-            color=0xFF3387
-        )
-        await context.send(embed=embed)
+    # elif isinstance(error, commands.MissingPermissions):
+    #     embed = discord.Embed(
+    #         title="Error!",
+    #         description="You are missing the permission `" + ", ".join(
+    #             error.missing_perms) + "` to execute this command!",
+    #         color=0xFF3387
+    #     )
+    #     await context.send(embed=embed)
     elif isinstance(error, commands.MissingRequiredArgument):
         embed = discord.Embed(
             title="Error!",
